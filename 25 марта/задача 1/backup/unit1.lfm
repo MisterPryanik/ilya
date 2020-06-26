@@ -1,0 +1,154 @@
+object Form1: TForm1
+  Left = 409
+  Height = 350
+  Top = 447
+  Width = 551
+  Caption = 'Углы по 3 сторонам треугольника'
+  ClientHeight = 330
+  ClientWidth = 551
+  Menu = MainMenu
+  OnCreate = FormCreate
+  LCLVersion = '2.0.8.0'
+  object Button1: TButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Label_b
+    AnchorSideTop.Side = asrBottom
+    AnchorSideBottom.Side = asrBottom
+    Left = 0
+    Height = 48
+    Top = 125
+    Width = 120
+    BorderSpacing.Top = 65
+    Caption = 'Вычислить'
+    OnClick = Button1Click
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Label_a: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 0
+    Height = 15
+    Top = 10
+    Width = 44
+    BorderSpacing.Top = 10
+    Caption = 'Число а'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label_b: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Label_a
+    AnchorSideTop.Side = asrBottom
+    Left = 0
+    Height = 15
+    Top = 45
+    Width = 45
+    BorderSpacing.Top = 20
+    Caption = 'Число b'
+    ParentColor = False
+    ParentFont = False
+  end
+  object a_Edit1: TEdit
+    AnchorSideLeft.Control = Label_b
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    Left = 65
+    Height = 23
+    Top = 10
+    Width = 109
+    BorderSpacing.Left = 20
+    BorderSpacing.Top = 10
+    OnChange = a_Edit1Change
+    ParentFont = False
+    TabOrder = 1
+    Text = '4'
+  end
+  object b_Edit2: TEdit
+    AnchorSideLeft.Control = Label_b
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = a_Edit1
+    AnchorSideTop.Side = asrBottom
+    Left = 65
+    Height = 23
+    Top = 48
+    Width = 106
+    BorderSpacing.Left = 20
+    BorderSpacing.Top = 15
+    ParentFont = False
+    TabOrder = 2
+    Text = '5'
+  end
+  object Memo1: TMemo
+    AnchorSideLeft.Control = Button1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    Left = 150
+    Height = 78
+    Top = 130
+    Width = 356
+    BorderSpacing.Left = 30
+    BorderSpacing.Top = 130
+    Lines.Strings = (
+      'raznosti_Memo'
+      '1'
+    )
+    OnChange = Memo1Change
+    ParentFont = False
+    TabOrder = 3
+  end
+  object c_Edit3: TEdit
+    Left = 64
+    Height = 23
+    Top = 80
+    Width = 106
+    TabOrder = 4
+    Text = '7'
+  end
+  object label_c: TLabel
+    Left = 1
+    Height = 15
+    Top = 80
+    Width = 44
+    Caption = 'Число с'
+    ParentBidiMode = False
+    ParentColor = False
+  end
+  object MainMenu: TMainMenu
+    left = 24
+    top = 232
+    object MenuItem1: TMenuItem
+      Caption = 'Файл'
+      OnClick = MenuItem1Click
+      object MenuItem2: TMenuItem
+        Caption = 'Сохранить'
+        OnClick = MenuItem2Click
+      end
+      object MenuItem3: TMenuItem
+        Caption = 'Сохранить отчет'
+        OnClick = MenuItem3Click
+      end
+      object MenuItem6: TMenuItem
+        Caption = 'Загрузить'
+        OnClick = MenuItem6Click
+      end
+    end
+    object MenuItem4: TMenuItem
+      Caption = 'Справка'
+      OnClick = MenuItem4Click
+    end
+    object MenuItem5: TMenuItem
+      Caption = 'Выход'
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    left = 112
+    top = 232
+  end
+  object SaveDialog1: TSaveDialog
+    FileName = 'C:\Users\днс\Desktop\Новая папка\ор'
+    InitialDir = 'C:\Users\днс\Desktop\Новая папка\'
+    left = 200
+    top = 232
+  end
+end
